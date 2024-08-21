@@ -352,9 +352,10 @@ GameObject:
   - component: {fileID: 751211006}
   - component: {fileID: 751211004}
   - component: {fileID: 751211007}
-  m_Layer: 0
+  - component: {fileID: 751211008}
+  m_Layer: 3
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -471,6 +472,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
+--- !u!114 &751211008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 751211003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c51c480e8a6941a09935312b398f2f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &834505116
 GameObject:
   m_ObjectHideFlags: 0
@@ -566,11 +579,11 @@ GameObject:
   - component: {fileID: 924860105}
   - component: {fileID: 924860103}
   - component: {fileID: 924860106}
-  - component: {fileID: 924860108}
   - component: {fileID: 924860107}
-  m_Layer: 0
+  - component: {fileID: 924860108}
+  m_Layer: 3
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -616,7 +629,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b31c260a1c0924f4ea3455d988e23f50, type: 3}
+  m_Sprite: {fileID: 1770603223, guid: fbba6ae4c40de4000b31679c044fc297, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -698,11 +711,11 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 1
-  m_Mass: 3.2585042
+  m_UseAutoMass: 0
+  m_Mass: 50
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -723,16 +736,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 924860102}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 850d6e9a62a5d4caca133219145a7c6d, type: 3}
+  m_Script: {fileID: 11500000, guid: 0cce07af0abd74159831e19eeaaa47ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxSpeed: 200
   mySpriteRenderer: {fileID: 924860103}
   myRigidbody: {fileID: 924860107}
-  runSpeed: 4
-  jumpSpeed: 6
-  isTurnedLeft: 0
-  isInAir: 0
-  speed: 2
+  onGround: 1
+  jumpStrength: 600
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
